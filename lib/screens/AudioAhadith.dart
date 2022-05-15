@@ -1,6 +1,6 @@
 
-import 'package:alnawawiforty/utils/colors.dart';
 import 'package:alnawawiforty/screens/localAudio.dart';
+import 'package:alnawawiforty/utils/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -18,22 +18,8 @@ class AudioAhadithScreen extends StatefulWidget {
 class _AudioAhadithScreenState extends State<AudioAhadithScreen> {
   @override
   Widget build(BuildContext context) {
-    Widget ayah(String key, name) {
-      return Stack(
-        alignment: Alignment.center,
-        children: [
-          Image.asset("assets/img.png"),
-          SvgPicture.asset("assets/svg/grey.svg"),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(key,style: const TextStyle(fontSize: 16,color: colorApp.yellow1),),
-              Text(name,style: const TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: colorApp.yellow1),textScaleFactor: .5,),
-            ],
-          )
-        ],
-      );
-    }
+    var size = MediaQuery.of(context).size;
+    
     return Scaffold(
       body:  Column(
         children: [
@@ -42,21 +28,27 @@ class _AudioAhadithScreenState extends State<AudioAhadithScreen> {
               SvgPicture.asset("assets/svg/background.svg",width: double.infinity,fit: BoxFit.cover,),
               Column(
                 children: [
-                  const SizedBox(height: 50,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+ SizedBox(
+                        height: size.height * .13 ,
+                      ),                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       const Text(""),
+                      // const Text(""),
                       SvgPicture.asset("assets/svg/logo.svg"),
-                      SvgPicture.asset("assets/svg/arrow-right.svg"),
-                    ],
+                      const Text(""),
+//                       IconButton(onPressed: (){
+//                         Navigator.pop(context);
+//                       }, icon: Icon(Icons.arrow_forward_ios_outlined
+// )
+//                       )      
+                                    ],
                   ),
                   Column(
-                    //mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: const [
+                    
+                    children:  [
                       TextApp.topHomeScreen,
-                      // TextApp.headerHomeScreen,
+                     
 
                     ],
                   ),

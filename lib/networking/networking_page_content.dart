@@ -1,5 +1,5 @@
 
-import 'package:alnawawiforty/model/hadithe.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -31,7 +31,7 @@ class _NetworkingPageContentState extends State<NetworkingPageContent> {
                   children: [
                     const Text(""),
                     SvgPicture.asset("assets/svg/logo.svg"),
-                    SvgPicture.asset("assets/svg/arrow-right.svg"),
+                    Icon(Icons.arrow_back_ios)
                   ],
                 ),
                 Column(
@@ -39,7 +39,10 @@ class _NetworkingPageContentState extends State<NetworkingPageContent> {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children:  [
                     
-                    TextApp.topHomeScreen,
+                    AutoSizeText(
+
+'${TextApp.topHomeScreen}',
+                          ),
                     // TextApp.headerHomeScreen,
 
                   ],

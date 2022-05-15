@@ -2,8 +2,8 @@ import 'package:alnawawiforty/utils/colors.dart';
 import 'package:alnawawiforty/screens/localAudio.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
-import 'model/hadithe.dart';
-import 'networking/networking_page.dart';
+import '../model/hadithe.dart';
+import '../networking/networking_page.dart';
 
 class HomeHadith extends StatefulWidget {
   final Hadith hadith;
