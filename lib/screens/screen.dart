@@ -1,25 +1,15 @@
-import 'dart:async';
 
 import 'package:alnawawiforty/utils/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
-import 'HomePage.dart';
 
-class SplashScreen extends StatefulWidget {
+class Screen extends StatefulWidget {
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
+  State<Screen> createState() => _ScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    Timer(Duration(seconds: 2), () {
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => HomePage())); //TODO ADD HOME SCREEN
-    });
-    super.initState();
-  }
+class _ScreenState extends State<Screen> {
+  
 
   @override
   Widget build(BuildContext context) {
@@ -38,9 +28,9 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.asset(
-                  "assets/svg/Group 1 (1).svg",
-                  fit: BoxFit.fitHeight,
+                Image.asset(
+                  "assets/myicon.png",
+                  // fit: BoxFit.fitHeight,
                 ),
               ],
             ),

@@ -1,3 +1,4 @@
+import 'package:alnawawiforty/utils/Strings.dart';
 import 'package:alnawawiforty/utils/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -5,7 +6,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../utils/botombar.dart';
 import '../db/mydata.dart';
 import '../model/hadithe.dart';
-import '../utils/Strings.dart';
 
 class AhadithScreen extends StatefulWidget {
   @override
